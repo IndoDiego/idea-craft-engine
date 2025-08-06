@@ -86,6 +86,7 @@ const Index = () => {
               className="gradient-primary shadow-primary hover:shadow-accent transition-all duration-300 group px-8 py-6 text-lg"
               onMouseEnter={() => setIsGetStartedHovered(true)}
               onMouseLeave={() => setIsGetStartedHovered(false)}
+              onClick={() => window.location.href = '/pretotipado'}
             >
               Comenzar gratis
               <ArrowRight className={`ml-2 w-5 h-5 transition-transform duration-300 ${

@@ -53,6 +53,11 @@ export const FeatureCard = ({ title, description, icon, comingSoon = false }: Fe
               !comingSoon ? 'gradient-primary shadow-primary hover:shadow-accent' : ''
             }`}
             disabled={comingSoon}
+            onClick={() => {
+              if (!comingSoon && title === "Pretotipado Inteligente") {
+                window.location.href = '/pretotipado';
+              }
+            }}
           >
             {comingSoon ? 'Muy pronto' : 'Explorar'}
             {!comingSoon && (
