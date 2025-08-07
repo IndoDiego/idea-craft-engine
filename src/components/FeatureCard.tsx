@@ -54,8 +54,12 @@ export const FeatureCard = ({ title, description, icon, comingSoon = false }: Fe
             }`}
             disabled={comingSoon}
             onClick={() => {
-              if (!comingSoon && title === "Pretotipado Inteligente") {
-                window.location.href = '/pretotipado';
+              if (!comingSoon) {
+                if (title === "Pretotipado Inteligente") {
+                  window.location.href = '/pretotipado';
+                } else if (title === "Estrategias de Marketing") {
+                  window.location.href = '/marketing';
+                }
               }
             }}
           >
