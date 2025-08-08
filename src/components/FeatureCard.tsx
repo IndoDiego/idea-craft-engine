@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 interface FeatureCardProps {
   title: string;
@@ -13,6 +14,7 @@ interface FeatureCardProps {
 
 export const FeatureCard = ({ title, description, icon, comingSoon = false }: FeatureCardProps) => {
   const [isHovered, setIsHovered] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <Card 
@@ -56,9 +58,9 @@ export const FeatureCard = ({ title, description, icon, comingSoon = false }: Fe
             onClick={() => {
               if (!comingSoon) {
                 if (title === "Pretotipado Inteligente") {
-                  window.location.href = '/pretotipado';
+                  navigate('/pretotipado');
                 } else if (title === "Estrategias de Marketing") {
-                  window.location.href = '/marketing';
+                  navigate('/marketing');
                 }
               }
             }}

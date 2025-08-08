@@ -10,10 +10,10 @@ import decisionsIcon from "@/assets/icon-decisions.jpg";
 import { HeroSection } from "@/components/HeroSection";
 import { FeatureCard } from "@/components/FeatureCard";
 import { StatsSection } from "@/components/StatsSection";
-
+import { useNavigate } from "react-router-dom";
 const Index = () => {
   const [isGetStartedHovered, setIsGetStartedHovered] = useState(false);
-
+  const navigate = useNavigate();
   const features = [
     {
       title: "Pretotipado Inteligente",
@@ -86,7 +86,7 @@ const Index = () => {
               className="gradient-primary shadow-primary hover:shadow-accent transition-all duration-300 group px-8 py-6 text-lg"
               onMouseEnter={() => setIsGetStartedHovered(true)}
               onMouseLeave={() => setIsGetStartedHovered(false)}
-              onClick={() => window.location.href = '/pretotipado'}
+              onClick={() => navigate('/pretotipado')}
             >
               Comenzar gratis
               <ArrowRight className={`ml-2 w-5 h-5 transition-transform duration-300 ${
